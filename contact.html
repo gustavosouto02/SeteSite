@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SETE - Contato</title>
+    <meta name="description" content="Entre em contato com a equipe do aplicativo SETE para atletas de esportes de quadra." />
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>" />
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="/index.html" class="logo">
+                <img src="/assets/logoSete.svg" alt="Logo da SETE" class="logo-img">
+                <span>SETE</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu">☰</button>
+            
+            <ul class="nav-menu">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/privacy.html">Privacidade</a></li>
+                <li><a href="/contact.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo"><span>SETE</span></div>
+            
+            <ul class="footer-links">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/privacy.html">Privacidade</a></li>
+                <li><a href="/contact.html">Contato</a></li>
+            </ul>
+            
+            <p class="copyright">© 2025 SETE App. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn?.addEventListener('click', () => {
+            if(navMenu.style.display === 'flex'){
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.backgroundColor = '#000';
+                navMenu.style.top = '60px';
+                navMenu.style.right = '20px';
+                navMenu.style.padding = '1rem';
+                navMenu.style.borderRadius = '8px';
+            }
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            alert(`Obrigado, ${name}! Sua mensagem foi recebida. Entraremos em contato em breve pelo email ${email}.`);
+
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

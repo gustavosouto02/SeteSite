@@ -1,0 +1,208 @@
+/* =================================
+   GERAL E VARIÁVEIS
+   ================================= */
+:root {
+    --primary-color: #D6FF45; /* Cor principal da página inicial */
+    --secondary-color: #000000;
+    --accent-color: #F8F9FA;
+    --text-color: #333333;
+    --text-light: #FFFFFF;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* =================================
+   HEADER
+   ================================= */
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Esta é a propriedade chave para o alinhamento vertical */
+    font-weight: 700;
+    font-size: 1.5rem;
+    gap: 10px; 
+}
+
+/* Nova regra para controlar o tamanho da imagem da logo */
+.logo-img {
+    height: 25px;  /* Ajuste a altura conforme necessário */
+    width: auto;  
+    position: relative; /* Permite mover o elemento */
+    top: -2px; 
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: var(--spacing-lg);
+}
+
+.nav-menu a {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Regra :hover ATUALIZADA com todos os efeitos */
+.nav-menu a:hover {
+    color: var(--primary-color);
+    background-color: rgba(214, 255, 69, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    /* A MÁGICA ACONTECE AQUI: */
+    transform: translateY(-3px) scale(1.05);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =================================
+   COMPONENTES REUTILIZÁVEIS
+   ================================= */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* =================================
+   FOOTER
+   ================================= */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logo span {
+    color: var(--primary-color);
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links li {
+    margin: 0 var(--spacing-md);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.text-primary {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* =================================
+   RESPONSIVIDADE
+   ================================= */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+    
+    .footer-links li {
+        margin: var(--spacing-sm) 0;
+    }
+}

@@ -1,0 +1,20 @@
+/* Estilos específicos para a seção de privacidade */
+#privacy {
+    background-color: var(--accent-color);
+    padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl) 0;
+    margin-top: 40px; /* espaço para header fixo */
+}
+
+.privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.privacy-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.privacy-section h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+}

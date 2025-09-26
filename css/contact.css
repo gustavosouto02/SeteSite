@@ -1,0 +1,53 @@
+/* Estilos específicos para a seção de contato */
+#contact {
+    padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl) 0;
+    margin-top: 60px; /* header fixo */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid #DDDDDD;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--text-dark); /* Texto claro para contraste */
+    border: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-size: 14px; /* <<< ADICIONE ESTA LINHA para aumentar a fonte */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: #c4ec3b; /* Um tom um pouco mais escuro do primary-color */
+    transform: translateY(-2px);
+}

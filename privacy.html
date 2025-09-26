@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SETE - Política de Privacidade</title>
+    <meta name="description" content="Política de privacidade do aplicativo SETE para atletas de esportes de quadra." />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/privacy.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>" />
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="/index.html" class="logo">
+                <img src="/assets/logoSete.svg" alt="Logo da SETE" class="logo-img">
+                <span>SETE</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menu">☰</button>
+
+            <ul class="nav-menu">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/privacy.html">Privacidade</a></li>
+                <li><a href="/contact.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="privacy">
+            <div class="container privacy-content">
+                <h2 class="section-title">Sua Privacidade em Primeiro Lugar</h2>
+
+                <div class="privacy-section" style="text-align: center; margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem;">Nossa política é simples: <strong>seus dados de treino são seus e
+                            ficam apenas no seu celular.</strong> Nós não coletamos e não temos acesso a eles.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>1. Coleta de Informações</h3>
+                    <p><strong>100% no seu dispositivo.</strong> Todas as informações sobre seus treinos e seu progresso
+                        são salvas localmente, na memória do seu celular. Elas nunca são enviadas para
+                        nossos servidores ou para a nuvem.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>2. Uso das Informações</h3>
+                    <p>O SETE utiliza os dados salvos no seu aparelho para uma única finalidade: <strong>mostrar a sua
+                            evolução para você.</strong> É com base nessas informações locais que geramos seus gráficos
+                        de desempenho, streaks e histórico de progresso.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>3. Compartilhamento de Dados</h3>
+                    <p>Não há compartilhamento de nenhum dado. Como não temos acesso aos seus dados, é impossível para
+                        nós compartilharmos, vendermos ou
+                        distribuirmos suas informações para qualquer pessoa ou empresa. <strong>A privacidade aqui é
+                            total.</strong></p>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>4. Alterações na Política</h3>
+                    <p>Esta política pode ser atualizada periodicamente. Notificaremos os usuários sobre mudanças
+                        significativas através do aplicativo ou por email.</p>
+                </div>
+                <div class="privacy-section">
+                    <h3>5. Consentimento</h3>
+                    <p>Ao utilizar o aplicativo SETE, você concorda com os termos desta política de privacidade.</p>
+                </div>
+                <div class="privacy-section">
+                    <p><strong>Última atualização:</strong> 25 de Setembro de 2025</p>
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo"><span>SETE</span></div>
+
+            <ul class="footer-links">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/privacy.html">Privacidade</a></li>
+                <li><a href="/contact.html">Contato</a></li>
+            </ul>
+
+            <p class="copyright">© 2025 SETE App. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.backgroundColor = '#000';
+                navMenu.style.top = '60px';
+                navMenu.style.right = '20px';
+                navMenu.style.padding = '1rem';
+                navMenu.style.borderRadius = '8px';
+            }
+        });
+    </script>
+</body>
+
+</html>

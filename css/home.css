@@ -1,0 +1,68 @@
+/* Estilos específicos para a seção Hero da página inicial */
+#hero {
+    background: linear-gradient(to right, var(--secondary-color), #111111);
+    color: var(--text-light);
+    padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl) 0;
+    text-align: center;
+    margin-top: 60px; /* Espaço para header fixo */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.hero-benefits {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.benefit-item {
+    flex: 1;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.app-badges {
+    margin-top: var(--spacing-lg);
+}
+
+.app-badge {
+    display: inline-block;
+    margin: 0 var(--spacing-sm);
+    background-color: var(--text-light);
+    color: var(--secondary-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    border: 3px solid var(--primary-color);
+}
+
+.app-badge:hover {
+    transform: translateY(-3px);
+}
