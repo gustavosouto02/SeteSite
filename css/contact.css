@@ -1,7 +1,7 @@
 /* Estilos específicos para a seção de contato */
 #contact {
     padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl) 0;
-    margin-top: 60px; /* header fixo */
+    margin-top: 15px; /* header fixo */
 }
 
 .contact-form {

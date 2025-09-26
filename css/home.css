@@ -4,7 +4,8 @@
     color: var(--text-light);
     padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl) 0;
     text-align: center;
-    margin-top: 60px; /* Espaço para header fixo */
+    margin-top: 15px;
+    /* Espaço para header fixo */
 }
 
 .hero-content {
@@ -48,11 +49,17 @@
 
 .app-badges {
     margin-top: var(--spacing-lg);
+    display: flex;
+    /* Ativa o Flexbox */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a linha de baixo */
+    justify-content: center;
+    /* Centraliza os botões no container */
+    gap: 1rem;
 }
 
 .app-badge {
     display: inline-block;
-    margin: 0 var(--spacing-sm);
     background-color: var(--text-light);
     color: var(--secondary-color);
     padding: var(--spacing-sm) var(--spacing-md);
@@ -61,8 +68,64 @@
     font-weight: 600;
     transition: transform 0.3s ease;
     border: 3px solid var(--primary-color);
+    min-width: 300px;
+    /* Ou o valor que achar melhor, ex: 20rem */
+    text-align: center;
 }
 
 .app-badge:hover {
     transform: translateY(-3px);
+}
+
+/* Adicione ao final de home.css */
+
+@media (max-width: 768px) {
+.hero-title {
+    font-size: 1.7rem;
+    line-height: 1.2; /* Deixa o título mais compacto e coeso */    
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6; /* Espaçamento padrão para boa leitura */
+    max-width: 30ch;  /* Limita a largura do subtítulo a ~35 caracteres */
+    text-align: center;
+    margin-left: auto;  /* Centraliza o subtítulo após limitar a largura */
+    margin-right: auto; /* Centraliza o subtítulo após limitar a largura */
+}
+
+    .hero-benefits {
+        display: flex;
+        flex-wrap: nowrap;
+        /* Impede que os itens quebrem a linha */
+        overflow-x: auto;
+        /* Permite a rolagem horizontal */
+        justify-content: flex-start;
+        /* Alinha os cards ao início */
+
+        /* Melhora a experiência de rolagem */
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+        /* Adiciona espaço para a barra de rolagem não cortar os cards */
+    }
+
+    .benefit-item {
+        /* Define um tamanho fixo para cada card no carrossel */
+        flex: 0 0 220px;
+        scroll-snap-align: start;
+    }
+
+    /* Opcional: Esconde a barra de rolagem, mas mantém a funcionalidade */
+    .hero-benefits::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero-benefits {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
 }

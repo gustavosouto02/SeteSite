@@ -2,7 +2,7 @@
 #privacy {
     background-color: var(--accent-color);
     padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-xl) 0;
-    margin-top: 40px; /* espaço para header fixo */
+    margin-top: 15px; /* espaço para header fixo */
 }
 
 .privacy-content {
